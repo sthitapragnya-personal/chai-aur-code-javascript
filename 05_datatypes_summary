@@ -1,0 +1,88 @@
+//data types are basically catego rised into 2 types on the basis of how the data is stored in the memory and how it is accesed
+//1.primitive datatype
+//2.non-primitive data type/refernce datatype
+
+///primitive datatype
+//---------------------
+//there are 7 primitive datatypes:
+//String 
+// Number
+// Boolean
+// null
+// undefined
+// Symbol -> it is basivally used to make the properties unique
+// BigInt
+
+//use
+//-------
+// const x=100
+// const xvalue=100
+// const isloggedin=true
+// const outsidetemp=null
+// let email=undefined
+// let email2;
+
+// const id=Symbol('123')
+// const anotherid=Symbol('123');
+// console.log(id===anotherid);//false
+
+// const bigNumber=34526753427865342687n
+// console.log(typeof bigNumber);//bigint
+
+
+//non-primitive datatype/refernce type
+//------------------------------------
+//in the memory the refernce is allocated
+//array
+//objects
+//functions
+
+// const hero=['red','blue','orange'] //array
+
+// const mybiodata={//object 
+//     name:"sthita",
+//     age:24,
+//     city:"bangalore"
+// }
+// function sum(params) { //function
+    
+// }
+// const y=function(){  //function
+
+// }
+
+// const z=()=>{   //function
+
+// }
+
+
+
+const x=undefined;
+console.log(typeof x); //undefined
+const y=null;
+console.log(typeof y); //object
+const z=function(){
+
+}
+console.log(typeof z); //function   ->  but this is actually object-function
+const id=Symbol('123')
+console.log(typeof id);//symbol
+const v=[1,2,3,4]
+console.log(typeof v);//object
+const mybiodata={//object 
+    name:"sthita",
+    age:24,
+    city:"bangalore"
+}
+console.log(typeof mybiodata);//object
+
+
+
+
+//note : wether js is static or dynamic lang
+//-------------------------------------------
+// let x="sthita"
+// x=123
+// x=true
+
+//so in js we never define the lang/variables therefore it is a dynamic lang
