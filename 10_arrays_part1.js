@@ -59,3 +59,5 @@ console.log(arr1.splice(1,3));//[ 2, 3, 4 ]
 console.log(arr1);//[ 1, 5, 6 ] 
 // here once the splice function is used the portion that is spliced gets removed out of the array
 // but in case of the slice the original array remains the same and also another difference is in case of slice the last index is not included but in case of the splice the last index is included too
+
+
