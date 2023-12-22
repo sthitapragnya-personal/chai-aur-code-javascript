@@ -1,1 +1,1 @@
-//refer to 26_DOM-js-image1.png and 26_DOM.html
+//refer to 26_DOM-js-image1.png, 26_DOM-js-image2.png and 26_DOM.html
