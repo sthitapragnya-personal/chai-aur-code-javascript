@@ -39,27 +39,26 @@ body{
 }
 .firstheading{
     width: 100vw;
-    height: 10vh;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;   
+}
+
+.secondpart{
+    background-color: rgb(73,82,84);
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.aa,.bb{
     display: flex;
     justify-content: start;
-    align-items: center;
-    font-size: 30px;
-    
-}
-.p{
-    width: 100vw;
-    height: 10vh;
-    background-color: white; 
-    margin-top: 3px;
-    padding-top: 20px;
-    border-radius: 20px;
-    padding-left: 5px;
-}
-a{
-    background-color: aliceblue;
-    text-decoration: none;
-    color: black;
-    text-transform: capitalize;
-    color: black;
-    font-weight: bolder;
 }

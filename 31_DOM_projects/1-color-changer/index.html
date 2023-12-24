@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="home">
+            home
+        </div>
+        <div class="channel">
+            youtube channel
+        </div>
+    </div>
+
+    <div class="firstheading">
+        <div>
+           project-1 color changer
+        </div>
+    </div>
+    
+    <div class="d">
+        <div class="d1 button" id="red"></div>
+        <div class="d2 button" id="yellow"></div>
+        <div class="d3 button" id="blue"></div>
+        <div class="d4 button" id="green"></div>
+    </div>
+    
+</body>
+<script>
+  const buttons=document.querySelectorAll(".button")
+  console.log(buttons);
+  const body=document.querySelector("body")
+
+  //event selector we will use in the projects
+  //-------------------------------------------
+
+  buttons.forEach(function(button){
+    console.log(button);
+    button.addEventListener("click",function(e){//here e is the object of event listner
+        console.log(e);
+        console.log(e.target);
+        if (e.target.id==="red") {
+            body.style.backgroundColor="red"
+            body.style.backgroundColor=e.target.id
+        }
+        if (e.target.id==="yellow") {
+            body.style.backgroundColor="yellow"
+            body.style.backgroundColor=e.target.id
+        }
+        if (e.target.id==="blue") {
+            body.style.backgroundColor="blue"
+            body.style.backgroundColor=e.target.id
+        }
+        if (e.target.id==="green") {
+            body.style.backgroundColor="green"
+            body.style.backgroundColor=e.target.id
+        }
+        
+    })
+  })
+
+</script>
+</html>

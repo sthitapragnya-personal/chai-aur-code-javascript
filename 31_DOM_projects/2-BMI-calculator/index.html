@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="home">
+            home
+        </div>
+        <div class="channel">
+            youtube channel
+        </div>
+    </div>
+
+    <div class="firstheading">
+        <div>
+            project-2 BMI index calculator
+        </div>
+    </div>
+    <br><br>
+    <form action="">
+        height in cm : <input type="text" id="ht">
+        <br><br>
+        weight in kg : <input type="text" id="wt">
+        <br><br>
+    <input type="submit" name="calculate" id="calculate">
+    <br><br>
+    BMI index : <textarea name="" id="result" cols="20" rows="2" resize="disabled"></textarea>
+    <br><br>
+
+    <div>BMI WEIGHT GUIDE</div>
+    <div>under weight = less than 18.6</div>
+    <div>normal range = between 18.6 to 24.9</div>
+    <div>over weight = greater than 24.9</div>
+
+    </form>
+    
+
+</body>
+<script>
+    const form=document.querySelector("form")
+    // const height=parseInt(document.querySelector("#ht").value)  -> this will give us the empty value as we are trying to extract the value of the height and the weight before submitting the form 
+
+    form.addEventListener("submit",function(e){
+        e.preventDefault() // this is used to prevent the default action of the form tag and the data is not submited anywhere as we use it
+        const height=parseInt(document.querySelector("#ht").value)
+        const weight=parseInt(document.querySelector("#wt").value)
+        const result=document.querySelector("#result")
+
+        if(isNaN(height)||isNaN(weight)){
+            result.innerHTML="enter valid weight and height"
+        }
+        else{
+            // formula to get the bmi if weight in kg and height in cm =(weight)/(Math.pow((height*100),2))
+            // const bmi= Math.round((weight)/(Math.pow((height/100),2)))
+            const bmi= ((weight)/(Math.pow((height/100),2))).toFixed(2)
+            result.innerHTML=bmi
+        }
+    })
+</script>
+</html>
