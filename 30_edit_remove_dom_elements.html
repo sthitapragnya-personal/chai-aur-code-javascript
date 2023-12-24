@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        //lets say i want to add multiple li inside the ul so we will be creating a function and then calling it/using it as many times as we need
+        function addlan(langname){
+            const x=document.createElement("li")
+            x.innerHTML=langname
+            document.querySelector('.language').appendChild(x)
+        }
+        
+        addlan("python")
+        addlan("c++")
+        addlan("bootstrap")
+    </script> -->
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    //lets say i want to add multiple li inside the ul so we will be creating a function and then calling it/using it as many times as we need
+    function addlan(langname){
+        const x=document.createElement("li")
+        x.innerHTML=langname
+        document.querySelector('.language').appendChild(x)
+    }
+    
+    addlan("python")
+    addlan("c++")
+    addlan("bootstrap")
+
+    // but besides that calling this manually we can create a array and a function that will create the required output
+
+    const array=["ruby","java","spring","docker"]
+    function execute(array) {
+        for (let i = 0; i < array.length; i++) {
+            const element = array[i];
+            addlan(element)
+        }
+    }
+    execute(array)
+
+
+    // we will next see a optimised way to add the elements
+    //-----------------------
+    function addoptimisedlang(langname){
+        const li=document.createElement("li")
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector(".language").appendChild(li)
+    }
+    addoptimisedlang("aabbccdd 123")
+
+    //EDIT
+    //-------------
+    const secondlang=document.querySelector("li:nth-child(2)")
+    secondlang.innerHTML="mojo"
+
+    // but the above is not a obtimised approach as we are using .innerHTML , no bellow we will see the optimised approach to edit a element
+    //------------------------------
+
+    const newli=document.createElement("li")
+    newli.textContent="pojo"
+    secondlang.replaceWith(newli) // it replaces the secondlang with newli
+
+    //another example of EDIT  //not workinh
+    //-------------------------
+    // const firstlang=document.querySelector("li:nth-child(1)")
+    // const x=document.createElement("li")
+    // x.createTextNode("js2")
+    // firstlang.replaceWith(x)
+
+    //another example of EDIT //not working
+    //-------------------------
+    // const thirdlang=document.querySelector("li:nth-child(3)")
+    // const thirdlang=document.querySelector("li:first-child")
+    // thirdlang.outerHTML="<li>typescript</li>"
+
+
+    //REMOVE
+    //------------------
+    const lastlang=document.querySelector("li:last-child")
+    lastlang.remove()
+
+    const y=document.querySelector("li:first-child")
+    y.remove()
+</script>
+</html>

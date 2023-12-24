@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: blueviolet; color: blanchedalmond;">
+    <div class="parent">
+        <!-- div.day*4 -> this creates 4 div tags with class name as day  -->
+
+
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+
+</body>
+<script>
+    //note : check all these commands in console inspect
+    //const parent=document.getElementsByClassName("parent")
+    const parent=document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[1]);
+    console.log(parent.children[1].innerHTML);
+    
+    for (let i = 0; i < parent.children.length; i++) {
+        // const element = parent.children[i];
+        // console.log(element.innerHTML);
+        console.log(parent.children[i].innerHTML);
+    }
+    parent.children[1].style.color="orange"
+    console.log(parent.firstElementChild);
+    console.log(parent.firstElementChild.innerHTML);
+    console.log(parent.lastElementChild);
+    console.log(parent.lastElementChild.innerHTML);
+
+    const day1=document.querySelector(".day")
+    console.log(day1)
+    console.log(day1.innerHTML);
+    console.log(day1.parentElement);
+    console.log(day1.nextElementSibling);
+    console.log(day1.previousElementSibling);
+    if(day1.nextElementSibling!=null){
+        day1.nextElementSibling.style.color="red";
+        }
+    else{
+        console.log("no next sibling");
+        }
+    if(day1.previousElementSibling!=null){
+        day1.previousElementSibling.color="green";
+    }
+    else{
+        console.log("No previous sibling");
+        }
+
+    //nodes 
+    //--------
+    console.log("Nodes : ",parent.childNodes);
+
+    // Nodes :  NodeList(11) [text, comment, text, div.day, text, div.day, text, div.day, text, div.day, text]
+
+    // here the text means the line break and besides the line breaks or the text there are 4 div tags so total 11 nodes in total , and point to remember if between two lines we have already given a line break then you may have left few lines or you may not leave any line in all the cases the browser renders or considers only a single line break or text , but if we write something in between the space of two lines then we get another line break.
+                   
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: whitesmoke;">
+  
+</body>
+<script>
+    // const div=document.createElement("h1")
+    // console.log(div);
+    const div=document.createElement("div") // here i have created a div 
+    console.log(div);
+    // next i have to create the properties and the attributes like id classes style etc. of the div that i have created
+    div.className="main"
+    div.id="myId"
+    div.id=Math.random()*10 //every time we save it generates a new id
+    div.id=Math.round(Math.random()*10)
+
+    div.setAttribute("title","generate a title")
+    div.setAttribute("font-size","100px")
+
+    div.innerHTML="hello bachoonnnn kya hal chal"
+    // bellow we will see another way to add content or text to the element that we have created
+    const text = document.createTextNode("code with sthita bhai")
+    div.appendChild(text)
+
+    div.style.backgroundColor="red"
+    div.style.padding="30px"
+    div.style.border="20px solid blue"
+    // now if we refresh the webbrowser  then we do not see any div with all these properties that we have mentioned , this is because even though we have created a element that is div we have not yet attached it to the main page so now we will see how to attach it:
+    document.body.appendChild(div)
+
+    
+    
+</script>
+</html>
