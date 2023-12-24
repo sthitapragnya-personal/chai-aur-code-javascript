@@ -44,22 +44,41 @@ body{
     justify-content: start;
     align-items: center;
     font-size: 30px;
-    
 }
-.p{
-    width: 100vw;
-    height: 10vh;
-    background-color: white; 
-    margin-top: 3px;
-    padding-top: 20px;
-    border-radius: 20px;
-    padding-left: 5px;
+
+.d{
+  width: 100vw;
+  height: 30vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
 }
-a{
-    background-color: aliceblue;
-    text-decoration: none;
-    color: black;
-    text-transform: capitalize;
-    color: black;
-    font-weight: bolder;
+.d1,.d2,.d3,.d4{
+    border: 2px solid black;
 }
+.d1{
+   width: 10%;
+   height: 70%;
+   background-color: red;
+   margin-left: 5px;
+}
+.d2{
+    width: 10%;
+    height: 70%;
+    background-color:yellow;
+    margin-left: 12px;
+ }
+ .d3{
+    width: 10%;
+    height: 70%;
+    background-color: blue;
+    margin-left: 12px;
+ }
+ .d4{
+    width: 10%;
+    height: 70%;
+    background-color: green;
+    margin-left: 12px;
+ }
