@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>amazing images</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img src="images/doc1.jpg" alt="doc1" width="200px" height="200px" id="doc1" >
+            </li>
+            <li>
+                <img src="images/doc2.jpg" alt="doc2" width="200px" height="200px" id="doc2" >
+            </li>
+            <li>
+                <img src="images/doc3.jpg" alt="doc3" width="200px" height="200px" id="doc3" >
+            </li>
+            <li>
+                <img src="images/doc4.jpg" alt="doc4" width="200px" height="200px" id="doc4" >
+            </li>
+            <li>
+                <img src="images/doc5.jpg" alt="doc5" width="200px" height="200px" id="doc5" >
+            </li>
+            <li>
+                <img src="images/maersk1.jpg" alt="maersk1" width="200px" height="200px" id="maersk1" >
+            </li>
+            <li>
+                <img src="images/maersk2.jpeg" alt="maersk2" width="200px" height="200px" id="maersk2" >
+            </li>
+            <li>
+                <img src="images/maersk5.jpg" alt="maersk5.jpg" width="200px" height="200px" id="maersk5.jpg" >
+            </li>
+            
+            <li>
+                <img src="images/maersk6.jpg" alt="maersk6" width="200px" height="200px" id="maersk6" >
+            </li>
+            <li>
+                <a href="https://google.com" id="google" style="color: aliceblue;">click here to go to google</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+//    -> in browser there are a lot of activities on which the events in the js are based 
+//    -> note : it is not recomended to inject the js events like onclick onmousehover etc in the html tags itself because when the application will sclae then it will create a lot of confussion
+
+// so we should declare the events in the js file or inside the script tag where all the js codes are present and this will not create the consfussion
+
+// document.getElementById("doc1").onclick=show()
+// function show(){
+//     alert("doc1 image")
+// }
+// document.getElementById("doc1").onclick=function(){
+//     alert("doc1 image")
+// }
+// //note : the above approach is good but yes it also has some problems like it gives less faetures and also do not gives the feature of propagation and what is propagation that we will be seeing further in this video. 
+// // so it is recomended to use the addEventListner because it gives a lot of features
+
+// document.getElementById("doc2").addEventListener("click",function(){
+//         alert("doc2 image");
+// },false) // not the third parameter is also there but by default it is false but yes there are some situations where the eventListner will not work if we do not give the third parameter manually
+
+// //attachEvent()  -> not used now a days
+// //jQuery -> not used now a days
+
+// document.getElementById("doc3").addEventListener('click',function(e){ //note : here e is the event object 
+//     console.log(e);  // here we get a lot od details and values that is we get a lot of events and mostly we get the browser events and the environment events like where did mouse click, where was the cursor , when was the time stamp when the mouse was clicked , or what was the width and height of the viewport etc .
+// },false)
+// // imp events 
+// //--------------
+// //type , time stamp , defaultPrevent
+// //target , toElement , srcElement  , currentTarget
+// //clientX , clienty , screenX , screenY , tiltX , tiltY
+// //altKey , ctrlKey , shiftKey , keyCode
+
+
+// // now what is event propagation
+// //--------------------------------
+// // it is the third parameter in the addEventListener
+// // it is of 2 types true and false
+// // true -> means event capturing -> here thr propagation is from putside element to inside element
+// // false -> means event bubbling -> here the propagation is from inside element to outside element
+
+// // we will see the use of propagation in the bellow example
+// //--------------------------------------------
+
+// //first we will see the effect of false as the third parameter that is bubbling up
+// //-----------------------------------------------------
+// document.getElementById("images").addEventListener('click',function(e){
+//     console.log("clicked inside the ul");
+// },false)
+
+// document.getElementById("maersk6").addEventListener('click',function(e){
+//     console.log("last image clicked");
+// },false)
+
+// // note : if iam clicking on the ul but not on the last image then it is showing that "clicked inside the ul" but if iuiam clicking on the last image then it is showing first "last image clicked" then "clicked inside the ul"
+// //therefore , in false -> here the propagation is from inside element to outside element
+
+
+// //------------------------------------------------------
+
+
+// //then we will see the effect of true as the third parameter that is event capturing
+// //------------------------------------------------------
+// document.getElementById("images").addEventListener('click',function(e){
+//     console.log("clicked inside the ul");
+// },true)
+
+// document.getElementById("maersk5").addEventListener('click',function(e){
+//     console.log("maersk5 image clicked");
+// },true)
+
+// // note : if iam clicking on the ul but not on the maersk5 image then it is showing that "clicked inside the ul" but if iam clicking on the maersk5 image then it is showing first "clicked inside the ul" then "maersk5 image clicked" 
+// //therefore , in ture -> here the propagation is from outisde element to inside element
+
+
+// //note : if we do not write anything as the third parameter that is the default case that means the default case is false .
+
+
+// //---------------------------------------------------
+
+
+// // we can stop the prapagation with the e.stopPropagation method
+// //now we will see the effect of e.stopPropagation in case of false
+// //-------------------------------------------------------
+// document.getElementById("images").addEventListener('click',function(e){
+//     console.log("clicked inside the ul");
+// },false)
+
+// document.getElementById("maersk2").addEventListener('click',function(e){
+//     e.stopPropagation()
+//     console.log("maersk2 image clicked");
+// },false)
+// // here it only displays "maersk2 image clicked" in all the cases
+
+
+
+// //---------------------------------------------------
+
+
+// //now we will see the effect of e.stopPropagation in case of true
+// //-------------------------------------------------------
+// document.getElementById("images").addEventListener('click',function(e){
+//     console.log("clicked inside the ul");
+// },true)
+
+// document.getElementById("maersk1").addEventListener('click',function(e){
+//     e.stopPropagation()
+//     console.log("maersk1 image clicked");
+// },true)
+// // here it only displays "clicked inside the ul" in all the cases
+
+
+
+// //------------------------------------------------
+
+
+
+// // now we will see the use of e.preventDefault()
+// //---------------------------------------------------
+// // the BELLOW thing is not working --->>> DOUBT DOUBT DOUBT 
+// document.getElementById("google").addEventListener('click',function(e){
+//     e.preventDefault() // this will not open the google page when we click on the link
+//     e.stopPropagation() // this will not print "clicked inside the ul" that is stop the bubbling up 
+//     console.log("google link clicked")    
+// },false)
+
+
+
+//-------------------------------------------------
+
+
+
+
+//-------------------------------------------------------
+document.querySelector("#images").addEventListener('click',function(e){
+    // console.log(e);
+    // console.log(e.target);
+    // console.log(e.target.parentNode);
+    // console.log(e.target.childNode);
+    console.log(e.target.parentNode);
+    if (e.target.tagName==='IMG') {
+        console.log(e.target.id);
+        const image_removed=e.target.parentNode
+        image_removed.remove()
+    }
+    // remove() is used to remove a element from the browser
+    // if we click on the iamge then its parent that is li is the parentNode and that will get deleted but by chance we click on any li instead of image then the parent of li is ul and the entire ul will be deleted
+    // so to solve this problem we need to take some precautions above the remove() is used
+
+
+
+    // another way to remove 
+    //-------------------------
+    //image_removed.parentNode.removeChild(image_removed)
+},false)
+</script>
+</html>
