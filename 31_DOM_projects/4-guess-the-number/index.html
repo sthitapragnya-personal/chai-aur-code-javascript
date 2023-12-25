@@ -42,9 +42,13 @@
                 </div>
                 <br>
                 <!-- <input type="number" id="guessInput" min="1" max="100" required> -->
-                <input type="text" id="guessinput">
+                <input type="text" id="guessinput" class="gi">
                 <br><br>
                 <input type="submit" name="submit guess" id="submit">
+                </div>
+                <br><br>
+                <div class="result">
+                    
                 </div>
                 <br><br>
                 <div class="aa">
@@ -52,7 +56,7 @@
                         previous guesses:
                     </div>
                     <div class="pg">
-                            5,6,7,8
+                            
                     </div>
                 </div>
                 <br>
@@ -61,7 +65,7 @@
                         Guess remaining:
                     </div>
                     <div class="gr">
-                            22
+                            10
                     </div>
                 </div>
             </div>
@@ -69,6 +73,38 @@
     </form>
     
 </body>
+<script>
+    const form = document.querySelector("form")
+    const right_number=Math.round(Math.random()*100)
+    console.log(right_number);
+    let count=10
+    let arr=[] //we have created an empty array
+    let all=""
+    console.log(typeof all);
+    form.addEventListener("submit",function(e){
+        e.preventDefault()
+        while (count>=1) {
+            // const number=Math.round(Math.random()*100)
+            const number=parseInt(document.querySelector(".gi").value)
+            console.log(number);
+            if (number==right_number) {
+                document.querySelector(".result").innerHTML="congratulations the you have guessed the number"
+                document.querySelector(".result").style.color="green"
+                break
+            }
+            else{
+                document.querySelector(".result").innerHTML="not the right number"
+                document.querySelector(".result").style.color="red"
+                count--
+                document.querySelector(".gr").innerHTML=count
+                document.querySelector()
+                all=all+" , "+number
+                console.log(all);
+                document.querySelector(".pg").innerHTML=`${all}`
+            }
+        }
+    })
+</script>
 </html>
 
-<!-- paused at 2:39:40 -->
+<!-- iam trying to do the last project by myself still not done it will try it agin but not now -->
