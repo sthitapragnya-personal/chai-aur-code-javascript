@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">code with sthita</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+
+    // setTimeout(function () {
+    //     console.log("i have done my btech from iter")
+    // },4000);
+
+    //-----------------------------
+
+    // const x=function(){
+    //     console.log("my fav food in biriyani");
+    // }
+    // setTimeout(x,5000);
+
+
+    //---------------------------
+    // const changetext=function(){
+    //     document.querySelector("#h1").innerHTML="also this is shubham code"
+    // }
+    // setTimeout(changetext,5000)
+
+    //--------------------------------
+
+
+    const changetext=function(){
+        document.querySelector("#h1").innerHTML="also this is shubham code"
+    }
+    const xx=setTimeout(changetext,5000)
+    document.querySelector("#stop").addEventListener('click',function() {
+        clearTimeout(xx);
+        console.log("stopped");
+    })
+
+</script>
+</html>
