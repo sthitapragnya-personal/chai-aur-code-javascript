@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const x=new XMLHttpRequest();
+    // XMLHttprequest is basically a method and it has all the ready states and it is used to senf the request and also get the request back means request to get the data and also get the required data. it helps to interact with the server 
+    // also it needs to be created a object and store it in a refernce so that we can call the methods that XMLHttpRequest has in it with the help of the reference.
+
+
+    // now how to send the request the open() method sends the request 
+    const requesturl= 'https://pokeapi.co/api/v2/pokemon/ditto'
+    x.open('GET','requesturl'); // till now the open() is not called (means the request is not send), note : the open() is called when we use send() method
+
+
+    x.send() // now the open() is called automatically means the request is send finally
+
+
+    // note : the request that we send the status of that request keeps on changing and in order to check that we need to use readyState as shown bellow
+    console.log(x.readyState); // it shows 1 as the output
+
+
+    // but if we need to continuesly track the status then we have to use onreadystatechange as shown bellow
+    x.onreadystatechange=function(){
+        console.log(x.readyState);
+        // at the same time we even want to detect the state then we can do that
+        if (x.readyState===4) {
+            console.log(this.responseText); //this refers to the current context
+            const data=this.responseText
+            console.log(data);
+            console.log(typeof data);//string  
+            //note : the output that comes from the request/server is mostly in the form of string , and that is why the bellow code os not working
+            console.log(data.followers);
+            // so we need to convert the data from string type to object type in order to get the values from the data 
+            data=JSON.parse(data)  // the JSON.parse() converts the data from string to object
+            console.log(typeof data);// now it is converted to object
+        }
+    }
+
+    x.send() // now the open() is called automatically means the request is send finally
+
+
+    //next we will learn about the console.log()
+    //-----------------------------------------
+    // it is not the part of the core java script 
+    // it is injected by the runtime js
+    //it is present in the v8 engine and that is written in c++ inside which the console.log() is present
+
+
+
+</script>
+</html>
