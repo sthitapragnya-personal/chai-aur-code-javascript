@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+
+        }
+    </style>
+</head>
+<body>
+     <!-- create a project where the backgrounf color cjhanges every second -->
+     
+     <div id="div1" style="font-size: 20px;">
+        select the strat button to chnage the backgrounf color and press of     <br> the stop button to stop the changing of the backgroung color
+     </div>
+     <br>
+     <button id="start">start</button>
+     <button id="stop">stop</button>
+</body>
+<script>
+    // first we need to generate the randowm color and random color is generated from the random hex value
+    // const hex="0123456789ABCDEF"
+    // console.log(hex[2]);
+    const randomcolor=function(){
+        const hex="0123456789ABCDEF"
+        // hex is #fffff -> 5 digits
+        let color="#"
+        for(let i=1;i<=5;i++){
+            color=color+hex[Math.floor(Math.random()*16)]
+        }
+        return color;
+        console.log(color);
+    }
+    const start_changing_color= function(){
+           setInterval(change_bg_color,1000); 
+    }
+    function change_bg_color(){
+        document.body.style.backgroundColor=randomcolor();
+    }
+    const stop_changing_color= function(){
+
+    }  
+
+    document.querySelector("#start").addEventListener('click',start_changing_color);
+    document.querySelector("#stop").addEventListener('click',stop_changing_color);
+
+
+</script>
+</html>

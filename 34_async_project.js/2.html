@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h1">odisha FC </h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("sthita1",Date.now());
+    // },3000)
+
+
+    //-------------------------
+
+
+    // const x=function(){
+    //     console.log("sthita2",Date.now());
+    // }
+    // setInterval(x,2000);
+
+
+    //------------------------------
+
+
+    //   const xx=function(str){
+    //     console.log(str,"sthita3",Date.now(),);
+    // }
+    // setInterval(xx,2000,"hi"); // here we can also give a third parameter
+
+
+    //--------------------------------
+
+    // const xx=function(str){
+    //     console.log(str,"sthita3",Date.now(),);
+    // }
+    // const yy=setInterval(xx,2000,"hi");
+    // document.querySelector("#stop").addEventListener('click',function(){
+    //     clearInterval(yy);
+    // })
+
+
+    //--------------------------------------
+
+    const xx=function(){
+        console.log("sthita started",Date.now(),);
+    }
+    let yy;
+    document.getElementById("start").addEventListener('click',function() {
+         yy=setInterval(xx,2000,"hi");
+    })
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearInterval(yy);
+    })
+
+
+
+</script>
+</html>

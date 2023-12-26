@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        #main{
+            width: 100vw;
+            height: 100vh;
+            background-color: red;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            /* align-content: center; */
+        }
+        /* h1{
+            width: 100%;
+            background-color: yellow;
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+        <div id="main">
+            <div id="sub">
+                <div >
+                    press the key and watch the magic
+                </div>
+                <h1 id="insert">
+                    <!-- aabbcc -->
+                </h1>
+            </div>
+        </div>
+</body>
+<script>
+    const insert=document.getElementById("insert")
+    window.addEventListener('keydown',function(e){
+        insert.innerHTML=`
+         <div class="color">
+            <table border=1px>
+                <tr>
+                    <th>key</th>
+                    <th>key code</th>
+                    <th>code</th>
+                </tr>
+                <tr>
+                    <td>${e.key === " "?"space key": e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.Code}</td>
+                </tr>
+            </table>
+        </div>`
+    },false)
+</script>
+</html>
