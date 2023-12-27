@@ -27,5 +27,60 @@
 
 
 
-
+//oops
 //-----------------------------------
+
+
+//object
+//--------
+// collection of classes and methods
+
+
+// why use oops
+
+
+//parts of oops
+//----------------
+// object literals
+// constructor function
+// prototypes
+// classes
+// instances (new,this)
+
+
+// 4 pillars of oops  -> read this of your own
+//-----------------------------------
+// Abstraction
+// ebcapsulation
+// inheritance
+// polymorphism
+
+
+//object literal
+//--------------
+// making literally an Object
+const user={}
+
+const user1={
+    username:"sthita",
+    age:21,
+    signedin:true,
+    getUserDetails:function(){
+        console.log("get user detailsfrom database ");
+        console.log(`username : ${this.username}`);//username : sthita
+        console.log(this);
+        //output:
+        // {
+        //     username: 'sthita',
+        //     age: 21,
+        //     signedin: true,
+        //     getUserDetails: [Function: getUserDetails]
+        //   }
+    }
+}
+console.log(user1.username);//sthita
+console.log(user1.getUserDetails());
+// get user detailsfrom database 
+// undefined
+console.log(this);//{}
+
