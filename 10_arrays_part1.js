@@ -7,7 +7,7 @@
 
 
 // //in js the size of the array is not fixed
-// // it can hac=ve elemets of different datatypes
+// // it can have elemets of different datatypes
 // //the elements can only be accesed using the index
 // //whenever we do the array copy it follows the shallow copy-> that means here the copies share the same refernce 
 // // deep copy -> here the copis do not share the same reference
@@ -16,9 +16,10 @@
 // const heroes=["batman","spiderman","superman"]
 // console.log(heroes);//[ 'batman', 'spiderman', 'superman' ]
 
+
 // //array methods
 // //---------------
-// const x=new Array(1,2,3,4,5)
+const x=new Array(1,2,3,4,5)
 // console.log(x[1]);//2
 // x.push(6) //adds element at the last of the array
 // console.log(x);//[ 1, 2, 3, 4, 5, 6 ]
@@ -39,25 +40,42 @@
 // console.log(xx);//1,2,3,4,5
 // console.log(typeof x);//object
 // console.log(typeof xx);//string
+let p=[1,2,"sthita",90.78,true];
+console.log(p);
+p.push(111);
+console.log(p);
+p.pop();
+console.log(p);
+p.unshift(10);
+console.log(p);
+p.shift();
+console.log(p);
+let y=p.join();
+console.log(y);
+console.log(typeof p);
+console.log(typeof y);
+
+
+
  
-// const r=[100,"sthita",5.6,true]
-// const xxx=x.join(r)
-// console.log(xxx);//
-// console.log(typeof x);//object
-// console.log(typeof xx);//string
+const r=[100,"sthita",5.6,true]
+const xxx=x.join(r)
+console.log(xxx);//
+console.log(typeof x);//object
+console.log(typeof xx);//string
 
 
 
 //slice and splice
 //---------------
-const arr1=[1,2,3,4,5,6]
-console.log(arr1);//[ 1, 2, 3, 4, 5, 6 ] //original array is not changed
-console.log(arr1.slice(1,3));//[ 2, 3 ] //here 3 is not included
-console.log(arr1);//[ 1, 2, 3, 4, 5, 6 ]  //original array is not changed
+// const arr1=[1,2,3,4,5,6]
+// console.log(arr1);//[ 1, 2, 3, 4, 5, 6 ] //original array is not changed
+// console.log(arr1.slice(1,3));//[ 2, 3 ] //here 3 is not included
+// console.log(arr1);//[ 1, 2, 3, 4, 5, 6 ]  //original array is not changed
 
-console.log(arr1.splice(1,3));//[ 2, 3, 4 ]
-console.log(arr1);//[ 1, 5, 6 ] 
-// here once the splice function is used the portion that is spliced gets removed out of the array
+// console.log(arr1.splice(1,3));//[ 2, 3, 4 ]
+// console.log(arr1);//[ 1, 5, 6 ] 
+// here once the splice function is used the portion that is spliced gets removed out of the original array
 // but in case of the slice the original array remains the same and also another difference is in case of slice the last index is not included but in case of the splice the last index is included too
 
 

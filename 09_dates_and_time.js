@@ -4,11 +4,6 @@
 
 // // Date objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970
 
-let date=new Date(); 
-console.log(date);
-console.log(date.toString()); 
-console.log(date.toDateString()); 
-
 
 // let mydate= new Date()
 // console.log(typeof mydate)//object
@@ -19,6 +14,7 @@ console.log(date.toDateString());
 // console.log(mydate.toLocaleString());//10/12/2023, 6:42:17 pm
 // console.log(mydate.toLocaleTimeString());//6:42:17 pm
 // console.log(mydate.toTimeString());//18:42:17 GMT+0530 (India Standard Time)
+
 
 
 // let createdate= new Date(2023, 0,20)
@@ -61,6 +57,7 @@ console.log(date.toDateString());
 // console.log(`${p.getDate()} and the time is ${p.getTime()} `); //10 and the time is 1702217273363
 
 
+
 // //imp method
 // //------------
 // let z=new Date()
@@ -69,3 +66,11 @@ console.log(date.toDateString());
 //     weekday:"short",
 //     year:"numeric"
 // })
+
+
+// let x=new Date();
+// x=x.toLocaleString('default',{
+//     weekday:"long",
+//     year:"numeric"
+// })
+// console.log(x);
