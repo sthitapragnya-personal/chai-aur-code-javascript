@@ -56,6 +56,8 @@
 
 //object
 
+
+
 console.log(typeof(23));//number
 console.log(typeof("sthita"));//string
 console.log(typeof(null));//object //interview q
