@@ -5,19 +5,19 @@
 // console.log("hello"+"world");//helloworld
 // const name="sthita"
 // const repocount=50
-// console.log(name+repocount+"value");//sthita50value
+// console.log(name+repocount+"value");//sthita50value  -> but this is a outdated way of using the string 
+// the new way of using string is shown bellow
 
-// //use of ``
-// //-----------
-// console.log(`hello my name is ${name} and my repocount is ${repocount}`);//hello my name is sthita and my repocount is 50
+// //use of `` 
+// -> this is called as backticks or string interpollation and here we use the placeholders
+// //------------------------------------------------------------------------------------
+// console.log(`hello my name is ${name} and my repocount is ${repocount}`);//hello my name is sthita and my repocount is 50   
 
 // // another way to declare the String
 // // ------------------------------------
 // const game= new String("game1");
 // console.log(game); //[String: 'game1']
 // console.log(typeof game);//object
-
-
 // console.log(game[0]);//g
 
 
@@ -32,12 +32,65 @@
 // console.log(game.charAt(0));//g   //get the character at a given index
 // console.log(game.charAt(100));  //returns nothing if the index is invalid
 // console.log(game.indexOf('a'));//1  //used to get the index of a given character from first
+//console.log(game.lastIndexOf('e'));//3 // used to return the last index where this perticular character is found
 // console.log(game.indexOf('z'));//-1   //returns -1 if the character is not found
 
+// console.log(game.substring(0,4));//game -> this method is used to get substring and here in 
+// console.log(game.substring(1,4));//ame
+// console.log(game.substring(-2,3));//gam -> here the negative index doesn't work
+
+// console.log(game.slice(0,3));//gam
+// console.log(game.slice(-1,2)); // -> here the negatice index works but i have doubt in this
+
+// let pppp="        sthita       ";
+// console.log(pppp); //        sthita
+// console.log(pppp.trim());//sthita   -> it trims all the spaces at the front and at the back of the
+// console.log(pppp.trimStart());
+// console.log(pppp.trimEnd());
+
+// let qq="sthita11sthita11";
+// console.log(qq.replace('11','%%%%'));//sthita%%%%sthita11   -> here it replaces the value with the new given value but it only replaces at the first position where it is found first
+
+// console.log(qq.replaceAll('11','666'));//sthita666sthita666 ->here it replaces at all the positions where it is found
+
+// console.log(qq.includes("11"));//true
+// console.log(qq.includes('23'));//false
+
+// // split() method
+// //------------------------
+// //The split() method of String values takes a pattern and divides this string into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array of string.
+// const str = "The quick brown fox jumps over the lazy dog.";
+// const words = str.split(" ");
+// console.log(words);
+// // [
+// //     'The',   'quick',
+// //     'brown', 'fox',
+// //     'jumps', 'over',
+// //     'the',   'lazy',
+// //     'dog.'
+// //   ]
+// console.log(words[3]);// Expected output: "fox"
+
+// const chars = str.split("");
+// console.log(chars);
+// // [
+// //     'T', 'h', 'e', ' ', 'q', 'u', 'i',
+// //     'c', 'k', ' ', 'b', 'r', 'o', 'w',
+// //     'n', ' ', 'f', 'o', 'x', ' ', 'j',
+// //     'u', 'm', 'p', 's', ' ', 'o', 'v',
+// //     'e', 'r', ' ', 't', 'h', 'e', ' ',
+// //     'l', 'a', 'z', 'y', ' ', 'd', 'o',
+// //     'g', '.'
+// //   ]
+// console.log(chars[8]);// Expected output: "k"
+
+// const strCopy = str.split();
+// console.log(strCopy);// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
 
 
-// // comparing strings
-// //-------------------
+
+// // // comparing strings
+// // //-------------------
 // const a = "a";
 // const b = "b";
 // if (a < b) {
@@ -113,8 +166,9 @@
 
 // //String.prototype.at() -> used to get the element at a given index of the string and returns nothing for invalid index
 ////----------------------------------------------------------
-// const x="sthita"
+//const x="sthita";
 // console.log(x.charAt(0));//s  //used to get the first element of the string
+// console.log(x.charAt(-1));//a //used to get the last element of the string
 // console.log(x.charAt(-1));//a //used to get the last element of the string
 // console.log(x.charAt(100));// returns nothing
 

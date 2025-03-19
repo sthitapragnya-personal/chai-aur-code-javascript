@@ -6,6 +6,7 @@
 // console.log(score);//33
 // console.log(y);//33
 
+
 //----------------------
 
 // let score="44"
@@ -24,7 +25,7 @@
 // let y=Number(score); // the Number(x) converts x into Number type
 // console.log(typeof y); //number
 // console.log(score);//33abc
-// console.log(y);//NaN // Nan stamnds for "not a number"
+// console.log(y);//NaN // Nan stands for "not a number"
 
 //-------------------------
 
@@ -39,12 +40,13 @@
 //-----------------------
 
 // let score=undefined
-// console.log(typeof(score));//object
-// console.log(typeof score);//object
+// console.log(typeof(score));//undefined
+// console.log(typeof score);//undefined
 // let y=Number(score); // the Number(x) converts x into Number type
 // console.log(typeof y); //number
-// console.log(score);//null
-// console.log(y);//0
+// console.log(score);//undefined
+// console.log(y);//NaN
+
 
 //---------------------
 
@@ -84,6 +86,9 @@
 // "33abc" -> NaN
 // true -> 1
 // false -> 0
+// null -> 0
+// undefined -> NaN
+// "sthita" -> NaN
 
 //converting to Boolean type
 //----------------------------
@@ -111,6 +116,12 @@
 // console.log(y);//false
 
 
+// let x;
+// let y=Boolean(x)
+// console.log(x);//undifined
+// console.log(y);//false
+
+
 // let x="sthita";
 // let y=Boolean(x)
 // console.log(x);//sthita
@@ -129,6 +140,7 @@
 //null -> false
 // "sthita" -> true
 // 76 -> true
+// undefined -> false
 
 
 //conversion to string
@@ -138,3 +150,27 @@
 // console.log(x);//33
 // console.log(y);//33
 // console.log(typeof y);//string
+
+
+
+//other basic operations
+//---------------------------
+
+// let value=2;
+// let negvalue= -value; // negvalue has the negative of value 
+// console.log(negvalue);//-2
+
+
+// console.log(2+3);//5
+// console.log(2-3);//-1
+// console.log(2*3);//6
+// console.log(2**3);//8
+// console.log(2/3);// gives quotient 0.6666666666
+// console.log(2%3);// gives remainder 0
+
+
+
+
+
+
+

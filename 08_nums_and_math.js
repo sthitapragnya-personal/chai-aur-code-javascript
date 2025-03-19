@@ -5,10 +5,11 @@
 // console.log(score);//400
 // console.log(typeof score);//number
 
+
 // const balance1 = new Number(600)
 // console.log(balance1);//[Number: 600]
 // console.log(balance1.valueOf());//600
-// console.log(typeof balance1);
+// console.log(typeof balance1);//object
 
 // const balance = new Number("600") // lets see what if we put it inside " "
 // console.log(balance);//[Number: 600]
@@ -19,6 +20,7 @@
 // //how to convert a number to string type
 // //----------------------------------------
 // const x=500
+// console.log(x.toString());//500
 // console.log(balance.toString().length);//3
 
 
@@ -37,7 +39,7 @@
 // // toLocaleString
 // // -------------------
 // // comas are given according to a country's number system by default it is usa number system
-// const hundreds=10000000
+// const hundreds=10000000;
 // console.log(hundreds.toLocaleString());//1,00,00,000
 // console.log(hundreds.toLocaleString('en-IN'));//1,00,00,000
 

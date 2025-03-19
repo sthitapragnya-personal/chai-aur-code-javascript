@@ -1,12 +1,13 @@
 //memory is of 2 types 
 // stack memory and heap memory
 
-// in case of primitive data types stack memory is used and un case of non- primitive datatype heap memory is used 
+// in case of primitive data types stack memory is used and in case of non- primitive datatype heap memory is used 
 
 // in case of stack memory the copy of the original memory /data is given and used but in case of heap memory the refence of the data/memory is passed and changes are made in the original data
 
 
 //concept of stack and refernce
+
 // let myyoutubename="sthita.youtube";
 // let anothername=myyoutubename;
 // console.log(myyoutubename+" "+anothername);
@@ -18,6 +19,10 @@
 //     myage:21
 // }
 // let usertwo=userone;
-// console.log(userone+"  "+usertwo);
+// console.log(userone);
+// console.log(usertwo);
+// console.log(userone+"  "+usertwo); // doubt why it prints -> [object Object]  [object Object]
 // usertwo.myage=23
-// console.log(userone+"  "+usertwo);
+// console.log(userone);
+// console.log(usertwo);
+// console.log(userone+"  "+usertwo);//[object Object]  [object Object]

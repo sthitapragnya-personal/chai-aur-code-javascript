@@ -1,16 +1,16 @@
-//data types are basically catego rised into 2 types on the basis of how the data is stored in the memory and how it is accesed
+//data types are basically categorised into 2 types on the basis of how the data is stored in the memory and how it is accesed
 //1.primitive datatype
 //2.non-primitive data type/refernce datatype
 
-///primitive datatype
-//---------------------
+///primitive datatype  -> these are call by value 
+//---------------------------------------------------
 //there are 7 primitive datatypes:
 //String 
 // Number
 // Boolean
 // null
 // undefined
-// Symbol -> it is basivally used to make the properties unique
+// Symbol -> it is basically used to make the properties or values unique
 // BigInt
 
 //use
@@ -38,17 +38,25 @@
 //functions
 
 // const hero=['red','blue','orange'] //array
+const p=['red',"blue",'green'];
+
 
 // const mybiodata={//object 
 //     name:"sthita",
 //     age:24,
 //     city:"bangalore"
 // }
+
 // function sum(params) { //function
     
 // }
 // const y=function(){  //function
 
+// }
+
+// const r=function(){ //function
+//     console.log("hello world");
+    
 // }
 
 // const z=()=>{   //function

@@ -4,6 +4,12 @@
 
 // // Date objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970
 
+let date=new Date(); 
+console.log(date);
+console.log(date.toString()); 
+console.log(date.toDateString()); 
+
+
 // let mydate= new Date()
 // console.log(typeof mydate)//object
 // console.log(mydate); //2023-12-10T13:06:10.361Z //this is very tuff to read 
@@ -17,7 +23,7 @@
 
 // let createdate= new Date(2023, 0,20)
 // console.log(createdate.toDateString());//Fri Jan 20 2023 
-// //note: 2023 is year 20 is date and 0 means january here month starts from 0 and ends with 11 here friday is given by js
+// //note: 2023 is year, 20 is date and 0 means january here month starts from 0 and ends with 11 here friday is given by js4 
 // createdate=new Date(2023)
 // console.log(createdate.toDateString());//Thu Jan 01 1970
 // createdate=new Date(2023,11)
