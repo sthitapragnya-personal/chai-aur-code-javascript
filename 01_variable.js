@@ -5,6 +5,15 @@ let accountEmail = "sthita@gmail.com"
 var accountPassword = "12345"
 accountCity = "bhubaneswar" // in this way also we can declare a variable but this is not a good practice to do the variable declaration
 var x; // its value is by default "undefined"
+const p=1233
+let q="shubham"
+var r="bbsr"
+console.log(p);
+console.log(q);
+console.log(r);
+
+
+
 
 console.log(accountId);//20143
 console.log(accountEmail);//sthita@gmail.com
