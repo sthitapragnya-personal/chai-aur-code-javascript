@@ -1,11 +1,11 @@
 //functions and parameters in js
 //-------------------------------
-//what is a function -> if there is a set of code that i want to many times so instead of writinf the same set of code multiple times we can just put it in a function and then we can use it multiple times
+//what is a function -> if there is a set of code that i want touse many times so instead of writinf the same set of code multiple times we can just put it in a function and then we can use it multiple times
 
 // function myname(){ //function declaration  
 //     console.log("My name is sthita");
 // }
-// //here myname is the function name or the functio refernce that stores the address of the function
+// //here myname is the function name or the function refernce that stores the address of the function
 // myname() //function calling/execution , output->My name is sthita
 
 // //addition of two numbers
@@ -90,4 +90,32 @@
 // console.log(loginusermsg())
 // // please enter a valid username
 // // undefined just logged in
+
+
+
+// function check_username(name){
+//     if(name===undefined || name===null){
+//         return `please enter a valid user name`
+//     }
+//     return `${name} just logged in here`
+// }
+// console.log(check_username());  // please enter a valid username
+// console.log(check_username(null));  // please enter a valid username
+// console.log(check_username(1));  // 1 just logged in here
+// console.log(check_username("sthita"));  // sthita just logged in here
+
+
+
+
+// function check(name="shubham"){  // here we have given default value to the parameter
+//     if(name===undefined || name===null){
+//         return `please enter a valid user name`
+//     }
+//     return `${name} just logged in here`
+// }
+// // note : if we dont pass any valid name then it will consider name as shubham but if we pass any valid name then that argument will override the default value of name
+// console.log(check());//shubham just logged in here
+// console.log(check(null));//please enter a valid user name
+// console.log(check("satyam"));//satyam just logged in here
+
 
