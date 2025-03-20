@@ -16,6 +16,22 @@
     
 // }
 
+// if-else ladder
+//--------------------
+// const pp=10;
+// if(pp==2){
+//     console.log("aaa");
+// }else if(pp==5){
+//     console.log("bbb");
+    
+// }else if(pp==10){
+//     console.log("ccc");
+    
+// }
+// else{
+//     console.log("ddd");
+    
+// }
 
 //----------------------
 
@@ -297,5 +313,7 @@
 //-------------------
 //condition ? true : false
 
-const x=60
-x<=50? console.log("less than 50") : console.log("more than 50") //more than 50
+// const x=60
+// x<=50? console.log("less than 50") : console.log("more than 50") //more than 50
+
+

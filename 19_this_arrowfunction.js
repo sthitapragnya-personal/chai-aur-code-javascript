@@ -166,3 +166,14 @@
 // console.log(addtwo(10,20));//{ username: 'sthita' }
 
 //-----------------------------
+
+
+// const yt=(n1,n2,n3)=>({
+//     name:"sthita",
+//     age:n1+n2+n3
+// })
+// console.log(yt(1,2,3));
+
+
+
+

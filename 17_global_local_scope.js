@@ -36,7 +36,21 @@
 //console.log(b);// b is not defined error
 //console.log(c);//30  // here it is problem as the c is defined in the global scope but it is getting the value of the c that is present in the local scope and it is the problem with var 
 
-//but in caes of let and const the variables declared in the global scope can be accesible in the local scope but the variables declared in the local scope cannot be accesible in the global scope
+//but in case of let and const the variables declared in the global scope can be accesible in the local scope but the variables declared in the local scope cannot be accesible in the global scope
+
+
+//---------------------------------
+
+
+// var c=300   // global scope
+// if (true) {
+//     let a=10
+//     const b=20
+//     c=30  //local scope
+// }
+//console.log(a);// a is not defined error
+//console.log(b);// b is not defined error
+//console.log(c);//30 
 
 
 //----------------------------

@@ -1,6 +1,6 @@
 //imediately invloked function expression (IIFE)
 //-----------------------------------------------
-// sometimes what we want is that as soon as our application starts the db should get connected to it and start working ans in some case what we want is that the local scope variable should not get confused or polluted with the global scope variable so in order to solve such things js has iife
+// sometimes what we want is that as soon as our application starts the db should get connected to it and start working and in some case what we want is that the local scope variable should not get confused or polluted with the global scope variable so in order to solve such things js has iife
 
 
 // (function chai(){
@@ -18,7 +18,7 @@
 //     console.log("db connected two");
 // })()
 
-// // note: this error is comming in the above case because when a iifa starts it do not knows when to stop so in order to stop that function's execution we need to use the semicolon aftr the iifa
+// // note: this error is comming in the above case because when a iifa starts it do not knows when to stop so in order to stop that function's execution we need to use the semicolon afetr the iifa
 
 
 

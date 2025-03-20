@@ -49,6 +49,7 @@
 // handleobject(user)//user name is sthita and price is undefined
 
 
+
 // //------------------------------------
 
 // const user={
@@ -86,4 +87,4 @@ function getvalue(getarray){
     return getarray[1]
 }
 console.log(getvalue(newarray));//2
-console.log(getvalue([10,20,30,40,50,60]));//20
+console.log(getvalue([10,20,30,40,50,60]));//20 -> here the argument overrides the parameter default value
