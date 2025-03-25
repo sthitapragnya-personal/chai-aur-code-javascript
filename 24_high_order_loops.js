@@ -175,15 +175,107 @@
 // for in loop with Map
 // ---------------------
 
-const x=new Map()
-x.set('IN','India')
-x.set('USA','united states of america')
-x.set('UK','united kingdom')
-x.set('FR','France')
-x.set('IN','India')
-x.set('USA','united states of america')
+//const x=new Map()
+// x.set('IN','India')
+// x.set('USA','united states of america')
+// x.set('UK','united kingdom')
+// x.set('FR','France')
+// x.set('IN','India')
+// x.set('USA','united states of america')
 
-for(const y in x){
-    console.log(y);// no output
+// for(const y in x){
+//     console.log(y);// no output
+// }
+
+
+
+
+//best higher order functions
+//------------------------------
+const xx=["kuna","muna","tuna","guna"]
+
+xx.forEach(function (ele){//as this is a callback function hence it do not have any name
+    console.log(ele);
+    // kuna
+    // muna
+    // tuna
+    // guna
+    
+})
+
+// we can also make the use of arrow functions in forEach loop
+//-------------------------------------------------------------
+xx.forEach( (ele)=> {
+    console.log(ele+"####");
+
+})
+
+
+
+function printme(item){
+    console.log(item+"    item");
+    // kuna####
+    // muna####
+    // tuna####
+    // guna####
 }
+xx.forEach(printme)// we can also pass the function name in forEach 
+// kuna    item
+// muna    item
+// tuna    item
+// guna    item
+
+
+
+xx.forEach((item)=>{
+    console.log(item);
+    // kuna
+    // muna
+    // tuna
+    // guna
+    
+})
+
+
+
+xx.forEach( (item,index,array)=>{
+    console.log(item+"    "+index+"    "+array);
+    // kuna    0    kuna,muna,tuna,guna
+    // muna    1    kuna,muna,tuna,guna
+    // tuna    2    kuna,muna,tuna,guna
+    // guna    3    kuna,muna,tuna,guna
+    
+})
+
+
+
+const yy=[
+    {
+        lname:"js",
+        lfilename:"01.js"
+    },
+    {
+        lname:"html",
+        lfilename:"02.html"
+    },
+    {
+        lname:"python",
+        lfilename:"03.py"
+    }
+]
+console.log(yy);
+// [
+//     { lname: 'js', lfilename: '01.js' },
+//     { lname: 'html', lfilename: '02.html' },
+//     { lname: 'python', lfilename: '03.py' }
+// ]
+
+yy.forEach((ele,index,array)=>{
+    console.log(ele.lname+"     "+ele["lfilename"]);
+    // js     01.js
+    // html     02.html
+    // python     03.py
+    
+})
+
 

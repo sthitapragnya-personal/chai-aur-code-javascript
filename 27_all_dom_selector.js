@@ -1,3 +1,32 @@
+// document.getElementById("title").id
+// 'title'
+// document.getElementById("title").class
+// undefined
+// document.getElementById("title").className
+// 'heading'
+// document.getElementById("title").getAttribute("class")
+// 'heading'
+// document.getElementById("title").getAttribute("id")
+// 'title'
+// document.getElementById("title").setAttribute("class","test") // class heading name is over ridden by test
+// undefined
+// document.getElementById("title").setAttribute("class","test heading") // here the previous class name that is heading will also be there as well as test will be new added class name 
+// undefined
+// const x=document.getElementById("title")
+// undefined
+// console.log(x)
+// VM926:1 <h1 id=​"title" class=​"test heading">​…​</h1>​
+// undefined
+// x.style.backgroundColor="green"
+// 'green'
+// x.style.padding="20px"
+// '20px'
+// x.style.borderRadius="20PX"
+// '20PX'
+
+
+
+
 //all dom selector in js
 //-----------------------
 //refer to 27_all_dom_selector.html and 27_all_dom_selector.png
@@ -9,6 +38,21 @@
 // textContent -> it can show both the visible as well as the hidden content of an element
 // note : these 2 above do not suppport html tags and do not shows the html tags
 // innerHTML -> it shows the html tags present inside a tag and also supports the html
+
+//example
+//--------------
+// const x= document.getElementById("title")
+// undefined
+// x.textContent
+// 'dom learning with me text text text 123'
+// x.innerHTML
+// 'dom learning with me <span style="display: none;">text text text 123</span>'
+// x.innerText
+// 'dom learning with me'
+
+
+
+
 
 // query selector
 //-------------------------
@@ -83,6 +127,9 @@
 // undefined
 // myh1
 // NodeList [h1#title.heading]0: h1#title.headinglength: 1[[Prototype]]: NodeList
+
+//  //note : the Nodelist and the html collection are not pure array
+
 // myh1[0].style.backgroundColor="blue"
 // 'blue'
 // temp_li_list
@@ -141,3 +188,24 @@
 // undefined
 // my_converted_array.forEach(function (li){li.style.color="orange"})
 // undefined
+
+
+
+
+// const x=document.getElementsByClassName("lili")
+// undefined
+// x
+// HTMLCollection(4) [li.lili, li.lili, li.lili, li.lili]0: li.lili1: li.lili2: li.lili3: li.lililength: 4[[Prototype]]: HTMLCollection
+// Array.from(x)
+// (4) [li.lili, li.lili, li.lili, li.lili]0: li.lili1: li.lili2: li.lili3: li.lililength: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+// const y=Array.from(x)
+// undefined
+// y
+// (4) [li.lili, li.lili, li.lili, li.lili]
+// y.forEach(function (l){ l.style.backgroundColor="yellow"})
+// undefined
+// 200_practice.html:1 Uncaught (in promise) Error: Could not establish connection. Receiving end does not exist.Understand this errorAI
+// y[0].innerHTML="hello"
+// 'hello'
+// y[2].innerText="hello hello hello "
+// 'hello hello hello '
