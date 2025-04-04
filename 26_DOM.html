@@ -8,11 +8,59 @@
 <body>
     <!-- note : in order to make the diagrams iam using the excalidraw application from the internet -->
     <div class="bg-black">
-        <h1 class="heading">dom learning on this github</h1>
+        <h1 class="heading" id="title">dom learning on this github</h1>
         <p>Lorem ipsum dolor sit, amet consectetur fdrgb</p>
     </div>
 </body>
 </html>
 
-!
 
+
+<!-- 
+document.getElementById('title').getAttribute
+ƒ getAttribute() { [native code] }
+document.getElementById('title').setAttribute("class","test")
+undefined
+document.getElementById('title').setAttribute("class","test heading")
+undefined
+const title=document.getElementById('title')
+undefined
+title
+<h1 class=​"test heading" id=​"title">​dom learning on this github​</h1>​
+title.sty
+undefined
+title.style.backgroundColor="red"
+'red'
+title.style.backgroundColor="green"
+'green'
+title.style.padding="20px"
+'20px'
+title.style.borderRadius="20px"
+'20px'
+
+-->
+
+
+<!-- 
+const title=document.getElementById("title")
+undefined
+title
+<h1 class=​"heading" id=​"title">​dom learning on this github​</h1>​
+title.textContent
+'dom learning on this github'
+title.innerHTML
+'dom learning on this github'
+title.innerHTML
+'dom learning on this github'
+
+
+// what is the differnce between innertext and textcontent and innerHTML
+//--------------------------------------------------------------------------
+
+innertext only shows the content that is not hidden and the hidden is not visible 
+
+but text content shows both the hidden as well as the non hidden data
+
+and the innerHTML shows the html tags along with the data 
+
+-->
