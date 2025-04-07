@@ -90,3 +90,107 @@
     y.remove()
 </script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- extra practice -->
+
+
+
+<!-- <script>
+    // my task is to add a new list item in language 
+//-----------------------------------------------
+    // const li=document.createElement("li")
+    // li.innerText="python";
+    // li.style.color="white";
+    // const ul=document.querySelector(".language");
+    // ul.appendChild(li);
+
+
+
+
+
+    // instead of this we can also create a function and then add this perticular logic into it and call the funciton as many times as we want
+//--------------------------------------------
+    function addlanguage(langname){
+        const li=document.createElement("li");
+        li.innerText=langname
+        li.style.color="white"
+        document.querySelector(".language").appendChild(li)
+    }
+    addlanguage("python");
+    addlanguage("java");
+    addlanguage("c++");
+
+
+
+
+// but if we want to optimise it as in the previous way it had to traverse the entire tree now the next way that we are going to see there it is not going to traverse the entire tree
+//---------------------------------------------
+    function add_optimised_way(langname){
+        const li=document.createElement('li');
+        const text=document.createTextNode(langname);
+        li.appendChild(text);
+        document.querySelector(".language").appendChild(li);
+    }
+    add_optimised_way("hello bbsr");
+
+
+
+
+// next we are going to see wether we are able to edit the values or not
+//--------------------------------
+document.querySelector("li:nth-child(2)").innerHTML="hello cuttuck";
+document.querySelector("li:nth-child(2)").innerText="hello puri";
+
+
+
+
+
+//optimised approach to edit the data/text
+//-------------------------------------------
+const x=document.querySelector("li:nth-child(4)");
+const newli=document.createElement("li");
+newli.textContent="multiverse";
+// x.replaceWith(newli);
+x.parentNode.replaceChild(newli,x);
+
+
+
+
+//edit the javascript with typescript
+//-------------------------------------
+const p=document.querySelector("li:first-Child");
+p.outerHTML="<li>Typescript</li>"
+
+
+
+
+//remove hello bbsr
+//---------------------
+const data=document.querySelector("li:last-Child");
+data.remove();
+
+</script> -->
